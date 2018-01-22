@@ -1,0 +1,22 @@
+{% extends "Nostory/index.html" %}
+
+{% block title %} ArticleList {% endblock %}
+{% block mainContent %}
+<div class="articles">
+{#    <div class="articleCount">#}
+{#        Number of articles: {{ articleCount }}#}
+{#    </div>#}
+    <div class="articleList">
+        {% for article in articleList %}
+            <a href="{% url 'app:article' article.id %}">
+                <div class="articleAbstraction">
+                <div class="articleTitleInList">{{ article.title }}</div>
+                <div class="articleWriterInList">{{ article.writer }}</div>
+                <div class="articleDateInList">{{ article.date }}</div>
+                <div class="articleAbstractionInList">{{ article.abstraction }}</div>
+            </div>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

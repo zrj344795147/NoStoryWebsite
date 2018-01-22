@@ -1,0 +1,18 @@
+{% extends "Nostory/index.html" %}
+
+{% block title %} SongList {% endblock %}
+{% block mainContent %}
+<div class="songList">
+    {% for song in songList %}
+        <div class="songItem">
+            <div class="songTitle">{{ song.title }}</div>
+            <span class="songSinger">{{ song.singer }}</span>
+            <div class="player">
+                <audio controls>
+                    <source src="{{ song.file.url }}" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

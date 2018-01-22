@@ -1,0 +1,61 @@
+<html>
+<header>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>NoStory</title>
+	<meta name="author" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Window-target" content="_top">
+	<meta name="robots" content="all">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+    {% load static %}
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</header>
+<body>
+    <div class="mainTopBar">
+        <a href="{% url 'app:index' %}">
+            <div class="topTitle">NoStory</div>
+        </a>
+        <div class="topIntro">What else can I say ?</div>
+    </div>
+    <div class="topMenu">
+        <ul>
+            <a href="{% url 'app:index' %}">
+                <li{% if menu == 'article'%} class="currentMenu"{% endif %}>
+                    <div class="menuItem ">Articles</div>
+                </li>
+            </a>
+            <a href="{% url 'app:songs' %}">
+                <li {% if menu == 'music'%} class="currentMenu"{% endif %}>
+                    <div class="menuItem">Music</div>
+                </li>
+            </a>
+        </ul>
+    </div>
+    <div class="mainContent">
+{#        {% include mainContent %}#}
+        {% block mainContent %} mainContent{% endblock %}
+    </div>
+    <div class="bottomBar">
+    </div>
+</body>
+<script>
+{#		;+function($){#}
+			/*PC， pad, pro等屏幕适配*/
+{#			$(window).on("load", function(e){#}
+{#				$(".mainMiddleDiv").css("height", (parseInt(window.screen.availHeight) - 0)+"px");#}
+{#				$(".topMenu").css("height", (parseInt(window.screen.availHeight) - 0)+"px");#}
+{#			});#}
+{#			$(window).on("resize", function(e){#}
+{#				$(".mainMiddleDiv").css("height", (parseInt(window.screen.availHeight) - 0)+"px");#}
+{#				$(".topMenu").css("height", (parseInt(window.screen.availHeight) - 0)+"px");#}
+{#			});#}
+{#		}(window.jQuery);#}
+	</script>
+</html>

@@ -1,0 +1,11 @@
+{% extends "Nostory/index.html" %}
+
+{% block title %} ArticleDetail {% endblock %}
+{% block mainContent %}
+<div class="articleDetail">
+    <div class="articleTitleInDetail">{{ article.title }}</div>
+    <div class="articleWriterInDetail">{{ article.writer }}</div>
+    <div class="articleDateInDetail">{{ article.date }}</div>
+    <div class="articleTextInDetail">{{ article.text | safe}}</div>
+</div>
+{% endblock %}
