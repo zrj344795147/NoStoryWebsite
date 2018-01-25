@@ -6,6 +6,6 @@
     <div class="articleTitleInDetail">{{ article.title }}</div>
     <div class="articleWriterInDetail">{{ article.writer }}</div>
     <div class="articleDateInDetail">{{ article.date }}</div>
-    <div class="articleTextInDetail">{{ article.text | safe}}</div>
+    <div class="articleTextInDetail">{{ article.text | linebreaks}}</div>
 </div>
 {% endblock %}

@@ -25,7 +25,7 @@ SECRET_KEY = 'pks@=am987u4s4@7wvw706tvgz+cagi5_o0_r+ep7hf!x0g2y*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,12 +76,24 @@ WSGI_APPLICATION = 'Nostory.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'NoStory',
+    #     'USER': 'root',
+    #     'PASSWORD': '650202wady+1s',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '3306',
+    #     'OPTIONS': {
+    #         'sql_mode': 'traditional',
+    #         'charset': 'utf8mb4',
+    #     }
+    # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'NoStory',
-        'USER': 'root',
-        'PASSWORD': '650202wady+1s',
-        'HOST': '127.0.0.1',
+        'NAME': 'NoStoryWebsite',
+        'USER': 'nostory',
+        'PASSWORD': '650202wadymysql',
+        'HOST': 'nostoryplus1s.com',
         'PORT': '3306',
         'OPTIONS': {
             'sql_mode': 'traditional',

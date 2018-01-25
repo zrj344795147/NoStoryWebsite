@@ -14,7 +14,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="format-detection" content="telephone=no" />
     {% load static %}
-	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </header>
 <body>
@@ -45,17 +45,4 @@
     <div class="bottomBar">
     </div>
 </body>
-<script>
-{#		;+function($){#}
-			/*PC， pad, pro等屏幕适配*/
-{#			$(window).on("load", function(e){#}
-{#				$(".mainMiddleDiv").css("height", (parseInt(window.screen.availHeight) - 0)+"px");#}
-{#				$(".topMenu").css("height", (parseInt(window.screen.availHeight) - 0)+"px");#}
-{#			});#}
-{#			$(window).on("resize", function(e){#}
-{#				$(".mainMiddleDiv").css("height", (parseInt(window.screen.availHeight) - 0)+"px");#}
-{#				$(".topMenu").css("height", (parseInt(window.screen.availHeight) - 0)+"px");#}
-{#			});#}
-{#		}(window.jQuery);#}
-	</script>
 </html>

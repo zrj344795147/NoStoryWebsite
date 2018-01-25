@@ -122,8 +122,7 @@ a, a:link, a:visited, a:hover, a:active{
     margin-right: 50px;
 }
 .articleDateInList {
-
-    color: #9E9E9E
+    color: #9E9E9E;
 }
 .articleAbstractionInList {
     margin-top: 15px;
@@ -146,7 +145,13 @@ a, a:link, a:visited, a:hover, a:active{
     color: #9E9E9E
 }
 .articleTextInDetail {
+    word-wrap: break-word;
     margin-top: 20px;
+
+}
+.articleTextInDetail p{
+    /*word-wrap: break-word;*/
+
 }
 .songList {
     margin:10px 0 0 10px;
