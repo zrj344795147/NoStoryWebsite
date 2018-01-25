@@ -28,12 +28,14 @@
         <ul>
             <a href="{% url 'app:index' %}">
                 <li{% if menu == 'article'%} class="currentMenu"{% endif %}>
-                    <div class="menuItem ">Articles</div>
+                    <div class="menuIcon"><img src="{% static 'img/bookIcon.svg' %}"></div>
+                    <span class="menuItem ">Articles</span>
                 </li>
             </a>
             <a href="{% url 'app:songs' %}">
                 <li {% if menu == 'music'%} class="currentMenu"{% endif %}>
-                    <div class="menuItem">Music</div>
+                    <div class="menuIcon"><img src="{% static 'img/musicIcon.svg' %}"></div>
+                    <span class="menuItem">Music</span>
                 </li>
             </a>
         </ul>

@@ -67,7 +67,7 @@ a, a:link, a:visited, a:hover, a:active{
     display: inline-block;
     padding-left:5px;
     padding-right: 5px;
-
+    opacity: .5;
 }
 
 .menuItem {
@@ -77,11 +77,19 @@ a, a:link, a:visited, a:hover, a:active{
 .currentMenu{
     background-color: #F5F5F5;
     /*border-top: 4px solid #ff3132;*/
+    opacity: 1 !important;
 }
 
 .topMenu ul li:hover{
     background-color: #BDBDBD;
     transition:all 0.5s ease;
+}
+.menuIcon {
+    display: inline-block;
+    vertical-align: middle;
+}
+.menuIcon img{
+    width:20px;
 }
 .mainContent {
     width:70%;
